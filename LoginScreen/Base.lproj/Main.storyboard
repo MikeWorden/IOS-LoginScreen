@@ -1,24 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginScreen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2d-tb-1Hv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orangeblock" translatesAutoresizingMaskIntoConstraints="NO" id="1eX-3x-qsH" userLabel="Top OrangeBlock">
+                                        <rect key="frame" x="271" y="52" width="135" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="3by-Dj-LZD"/>
+                                            <constraint firstAttribute="width" constant="135" id="LLN-xD-psG"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="Oph-up-laS"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="cAG-4e-C0b"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orangeblock" translatesAutoresizingMaskIntoConstraints="NO" id="dp3-X8-zN7" userLabel="Bottom OrangeBlock">
+                                        <rect key="frame" x="8" y="827" width="135" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="27" id="FnU-zC-pdQ"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="135" id="G5h-x2-my9"/>
+                                            <constraint firstAttribute="height" constant="27" id="SeH-B2-efk"/>
+                                            <constraint firstAttribute="width" constant="135" id="cP0-EV-A3i"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="9Cw-X8-BU8">
+                                        <rect key="frame" x="107" y="205.5" width="200" height="485.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gro-1C-y8x">
+                                                <rect key="frame" x="50" y="0.0" width="100" height="100"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Touch_ID_logo" translatesAutoresizingMaskIntoConstraints="NO" id="bjy-HB-P7B">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="VyD-ib-8E7"/>
+                                                            <constraint firstAttribute="width" constant="100" id="qWL-jT-7d0"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Qzi-l5-MYJ">
+                                                <rect key="frame" x="1.5" y="154" width="197.5" height="26.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with TouchID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LY0-Jd-IoA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="197.5" height="26.5"/>
+                                                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="20"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jsg-Xc-Xfv">
+                                                <rect key="frame" x="13" y="234.5" width="174.5" height="53"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use TouchID for faster and easier login." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgP-xx-UZ2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="174.5" height="53"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="53" id="sS5-f2-LQA"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cxs-wU-I59">
+                                                <rect key="frame" x="20" y="341.5" width="160" height="45"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRh-10-wNg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="160" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="otq-V6-ELZ"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Login with touchID">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="0.0"/>
+                                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qyB-iz-lNG"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QNs-AZ-P2X">
+                                                <rect key="frame" x="28.5" y="440.5" width="143" height="45"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zs4-1v-rfW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="143" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="xtP-ap-Cxo"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="New User? Sign Up!">
+                                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="0.0"/>
+                                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="cxs-wU-I59" secondAttribute="trailing" constant="20" id="AfT-vE-6wT"/>
+                                            <constraint firstItem="cxs-wU-I59" firstAttribute="leading" secondItem="9Cw-X8-BU8" secondAttribute="leading" constant="20" id="kjK-2x-Yc9"/>
+                                            <constraint firstAttribute="width" constant="200" id="n3U-aP-CLG"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.15686274509803921" green="0.16470588235294117" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="dp3-X8-zN7" firstAttribute="bottom" secondItem="S2d-tb-1Hv" secondAttribute="bottomMargin" id="0Sq-lx-D48"/>
+                                    <constraint firstItem="9Cw-X8-BU8" firstAttribute="centerX" secondItem="S2d-tb-1Hv" secondAttribute="centerX" id="2Rc-Qu-mFy"/>
+                                    <constraint firstItem="1eX-3x-qsH" firstAttribute="trailing" secondItem="S2d-tb-1Hv" secondAttribute="trailingMargin" id="8MU-th-QSI"/>
+                                    <constraint firstItem="dp3-X8-zN7" firstAttribute="leading" secondItem="S2d-tb-1Hv" secondAttribute="leadingMargin" id="EcV-95-1VU"/>
+                                    <constraint firstItem="1eX-3x-qsH" firstAttribute="top" secondItem="S2d-tb-1Hv" secondAttribute="topMargin" id="Xrp-qG-w66"/>
+                                    <constraint firstItem="9Cw-X8-BU8" firstAttribute="centerY" secondItem="S2d-tb-1Hv" secondAttribute="centerY" id="d8a-jq-VWh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="S2d-tb-1Hv" secondAttribute="bottom" id="1gd-MB-uZE"/>
+                            <constraint firstItem="S2d-tb-1Hv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7ib-ay-6JI"/>
+                            <constraint firstItem="S2d-tb-1Hv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gmm-fQ-kOP"/>
+                            <constraint firstAttribute="trailing" secondItem="S2d-tb-1Hv" secondAttribute="trailing" id="icZ-Pd-uUC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blockImage" destination="1eX-3x-qsH" id="hYX-k1-RsR"/>
+                        <outlet property="loginButton" destination="lRh-10-wNg" id="1KL-NO-Le6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Touch_ID_logo" width="270" height="270"/>
+        <image name="orangeblock" width="800" height="1200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
