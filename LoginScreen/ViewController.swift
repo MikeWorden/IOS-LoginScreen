@@ -24,17 +24,25 @@ class ViewController: UIViewController {
 	}
 	
 	@IBAction func loginButtonPressed(_ sender: Any) {
+		//
 		let localAuthenticationContext = LAContext()
 		var authorizationError: NSError?
-		
 		let authReason = "Authentication required to Login"
 		
-		if localAuthenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authorizationError) {
-			localAuthenticationContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: authReason) {
+		if localAuthenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authorizationError)
+		{
+			localAuthenticationContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: authReason)
+			{
 				success, evaluateError in
-				if success {
+				if success
+				{
 					print("Successfully logged in via TouchID")
-				} else {
+					DispatchQueue.main.async {
+						self.performSegue(withIdentifier: "loggedIn", sender: nil)
+					}
+				}
+				else
+				{
 					guard let error = evaluateError else {
 						return
 					}
@@ -42,7 +50,9 @@ class ViewController: UIViewController {
 				}
 			}
 			
-		} else {
+		}
+		else  // Can't log in with biometrics
+		{
 			guard let error = authorizationError else {
 				return
 			}
