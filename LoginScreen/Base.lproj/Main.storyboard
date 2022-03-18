@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="12" width="414" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orangeblock" translatesAutoresizingMaskIntoConstraints="NO" id="1eX-3x-qsH" userLabel="Top OrangeBlock">
-                                        <rect key="frame" x="271" y="96" width="135" height="27"/>
+                                        <rect key="frame" x="271" y="40" width="135" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="3by-Dj-LZD"/>
                                             <constraint firstAttribute="width" constant="135" id="LLN-xD-psG"/>
@@ -86,7 +86,7 @@
                                                             <constraint firstAttribute="height" constant="45" id="otq-V6-ELZ"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Login with touchID">
+                                                        <buttonConfiguration key="configuration" style="gray" title="Login ">
                                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="0.0"/>
                                                             <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <color key="baseBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -127,7 +127,7 @@
                                     <constraint firstItem="9Cw-X8-BU8" firstAttribute="centerX" secondItem="S2d-tb-1Hv" secondAttribute="centerX" id="2Rc-Qu-mFy"/>
                                     <constraint firstItem="1eX-3x-qsH" firstAttribute="trailing" secondItem="S2d-tb-1Hv" secondAttribute="trailingMargin" id="8MU-th-QSI"/>
                                     <constraint firstItem="dp3-X8-zN7" firstAttribute="leading" secondItem="S2d-tb-1Hv" secondAttribute="leadingMargin" id="EcV-95-1VU"/>
-                                    <constraint firstItem="1eX-3x-qsH" firstAttribute="top" secondItem="S2d-tb-1Hv" secondAttribute="topMargin" id="Xrp-qG-w66"/>
+                                    <constraint firstItem="1eX-3x-qsH" firstAttribute="top" secondItem="S2d-tb-1Hv" secondAttribute="top" constant="40" id="Xrp-qG-w66"/>
                                     <constraint firstItem="9Cw-X8-BU8" firstAttribute="centerY" secondItem="S2d-tb-1Hv" secondAttribute="centerY" id="d8a-jq-VWh"/>
                                 </constraints>
                             </view>
@@ -143,8 +143,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="47L-wA-ZB4"/>
                     <connections>
-                        <outlet property="blockImage" destination="1eX-3x-qsH" id="hYX-k1-RsR"/>
+                        <outlet property="LoginPrompt" destination="LY0-Jd-IoA" id="TvS-w9-PZW"/>
+                        <outlet property="blockImage" destination="bjy-HB-P7B" id="8W8-cS-cOQ"/>
                         <outlet property="loginButton" destination="lRh-10-wNg" id="1KL-NO-Le6"/>
+                        <outlet property="loginHint" destination="xgP-xx-UZ2" id="gPg-P7-94o"/>
+                        <outlet property="loginImage" destination="bjy-HB-P7B" id="F7X-6e-6zH"/>
                         <segue destination="c5G-hq-DU6" kind="show" identifier="loggedIn" id="nji-3u-XGJ"/>
                     </connections>
                 </viewController>
